@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Jayanth's Portifolio",
-  description: "Modern Next.js Web Based Portifolio",
+  description: "Modern Web based portfolio using Next.js",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
