@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
@@ -103,9 +105,10 @@ export const navItems = [
     },
     {
         id: 5,
-        title: "Infosys Summer Internship Project",
-        des: "Designed and developed a full-stack web application for course management, enhancing operational efficiency with scheduling and progress tracking features. ",
+        title: "Task Management Application",
+        des: "A full Stack Springboot Application under works, which is aimed at task management for user, Using Angular as the frontend framework for this project",
         img: "/p3.svg",
+        link: "https://github.com/Jayanth-stack?tab=repositories",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg","/database-icon.svg","/auth-icon.svg","/security-icon.svg"],
       },
 
