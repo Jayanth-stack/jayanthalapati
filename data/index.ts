@@ -152,14 +152,14 @@ export const navItems = [
     {
       id: 1,
       title: "Senior Systems Engineer",
-      desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+      desc: "Had a holisitc experience towards Software development along with DevOps, allowing me to have a clearer picture as to how to design and deploy my software.",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
     {
       id: 2,
       title: "Software Internship",
-      desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+      desc: "Designed and Developed a Full stack application for the company and helped in their code review and analysis.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/exp2.svg",
     },
@@ -170,6 +170,13 @@ export const navItems = [
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/exp3.svg",
     },
+    {
+      id: 4,
+      title: "Working on Personal Projects",
+      desc: "Avid interest towards developing personal projects and inquisitive enough to learn new technologies.",
+      className: "md:col-span-2", 
+      thumbnail: "/exp4.svg",
+    },
   
   ];
   
@@ -177,13 +184,16 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      link: "https://github.com/Jayanth-stack?tab=repositories",
     },
     {
       id: 2,
       img: "/twit.svg",
+      link: "https://x.com/AJayanth007",
     },
     {
       id: 3,
       img: "/link.svg",
+      link:"https://www.linkedin.com/in/jayanth-alapati-6b9123167/",
     },
   ];
