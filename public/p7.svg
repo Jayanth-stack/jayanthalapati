@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect x="0" y="0" width="400" height="300" fill="#f0f8ff" />
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="50" fill="#4a90e2" />
+  <text x="20" y="32" font-family="Arial, sans-serif" font-size="20" fill="white">Course Dashboard</text>
+  
+  <!-- Progress Circle -->
+  <circle cx="75" cy="125" r="50" fill="none" stroke="#ddd" stroke-width="10" />
+  <circle cx="75" cy="125" r="50" fill="none" stroke="#4caf50" stroke-width="10" stroke-dasharray="220" stroke-dashoffset="66" />
+  <text x="75" y="125" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle" dominant-baseline="middle">70%</text>
+  <text x="75" y="160" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">Progress</text>
+  
+  <!-- Course Modules -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="230" height="30" fill="#e0e0e0" rx="5" ry="5" />
+    <rect x="0" y="0" width="200" height="30" fill="#4a90e2" rx="5" ry="5" />
+    <text x="10" y="20" font-family="Arial, sans-serif" font-size="14" fill="white">Module 1: Introduction</text>
+    
+    <rect x="0" y="40" width="230" height="30" fill="#e0e0e0" rx="5" ry="5" />
+    <rect x="0" y="40" width="150" height="30" fill="#4a90e2" rx="5" ry="5" />
+    <text x="10" y="60" font-family="Arial, sans-serif" font-size="14" fill="white">Module 2: Basics</text>
+    
+    <rect x="0" y="80" width="230" height="30" fill="#e0e0e0" rx="5" ry="5" />
+    <rect x="0" y="80" width="100" height="30" fill="#4a90e2" rx="5" ry="5" />
+    <text x="10" y="100" font-family="Arial, sans-serif" font-size="14" fill="white">Module 3: Advanced</text>
+  </g>
+  
+  <!-- Performance Graph -->
+  <g transform="translate(20, 200)">
+    <line x1="0" y1="80" x2="360" y2="80" stroke="#666" stroke-width="2" />
+    <line x1="0" y1="0" x2="0" y2="80" stroke="#666" stroke-width="2" />
+    <polyline points="0,60 90,40 180,50 270,20 360,30" fill="none" stroke="#ff7f0e" stroke-width="3" />
+    <text x="180" y="100" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">Performance Over Time</text>
+  </g>
+  
+  <!-- Notifications -->
+  <g transform="translate(330, 70)">
+    <circle cx="35" cy="35" r="25" fill="#ff5722" />
+    <text x="35" y="35" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" dominant-baseline="middle">3</text>
+    <text x="35" y="70" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">New</text>
+  </g>
+</svg>

@@ -9,7 +9,6 @@ const Hero = () => {
   return (
     <div className='pb-20 pt-36'>
         <div>
-            <ModeToggle/>
             <Spotlight className='-top-40 -left-10 md:-left-32 md:-top-20 h-screen' fill='white' />
             <Spotlight className='-top-10 -left-full h-[80vh] w-[50vw]' fill='purple' />
             <Spotlight className='top-28 left-80 h-[80vh] w-[50vw]' fill='blue' />
@@ -28,7 +27,7 @@ const Hero = () => {
               words="Engineering Scalable Solutions for Seamless User Experiences."
               className='text-center text-[40px] md:text-5xl lg:text-6xl'/>
               <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-                Hi, I&apos;m Jayanth, a Software Development Engineer from India based in USA.
+                Hi, I&apos;m Jayanth Alapati, a Software Development Engineer based in USA.
 
               </p>
 

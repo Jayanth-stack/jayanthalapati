@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <!-- Background -->
+  <rect x="0" y="0" width="300" height="200" fill="#f0f8ff" />
+  
+  <!-- Input Data -->
+  <g transform="translate(30, 30)">
+    <rect x="0" y="0" width="60" height="40" fill="#ffcccb" stroke="#ff6b6b" stroke-width="2" rx="5" ry="5" />
+    <rect x="0" y="50" width="60" height="40" fill="#ffffcc" stroke="#ffd700" stroke-width="2" rx="5" ry="5" />
+    <rect x="0" y="100" width="60" height="40" fill="#ccffcc" stroke="#66cdaa" stroke-width="2" rx="5" ry="5" />
+  </g>
+  
+  <!-- Machine Learning Process -->
+  <g transform="translate(120, 30)">
+    <rect x="0" y="0" width="80" height="140" fill="#e6e6fa" stroke="#9370db" stroke-width="2" rx="10" ry="10" />
+    <circle cx="40" cy="30" r="15" fill="#9370db" />
+    <circle cx="40" cy="70" r="15" fill="#9370db" />
+    <circle cx="40" cy="110" r="15" fill="#9370db" />
+    <path d="M25 30 L55 30 M25 70 L55 70 M25 110 L55 110" stroke="#ffffff" stroke-width="2" />
+    <text x="40" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">ML Model</text>
+  </g>
+  
+  <!-- Output/Prediction -->
+  <g transform="translate(230, 75)">
+    <polygon points="0,0 60,0 50,25 10,25" fill="#87cefa" stroke="#4169e1" stroke-width="2" />
+    <text x="30" y="17" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Prediction</text>
+  </g>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  <line x1="95" y1="100" x2="115" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="205" y1="100" x2="225" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Labels -->
+  <text x="60" y="190" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Input Data</text>
+  <text x="260" y="190" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Output</text>
+  
+  <!-- Title -->
+  <text x="150" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">Machine Learning Process</text>
+</svg>

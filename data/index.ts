@@ -51,7 +51,7 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Currently building a JS Animation library for Workout Dashboard",
+      title: "Currently in works of building a Full-Stack Trading application",
       description: "The Inside Scoop",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -84,7 +84,7 @@ export const navItems = [
       id: 2,
       title: "Using TinyML concepts to Alert Cyclists",
       des: "Designed and deployed a CNN for cyclist safety with 98.9% accuracy on a microcontroller using TensorFlow Lite, showcasing expertise in machine learning and edge computing",
-      img: "/p2.svg",
+      img: "/p5.svg",
       iconLists: ["/ml-icon.svg", "/edge-computing-icon.svg"],
       link: "https://github.com/Jayanth-stack?tab=repositories",
     },
@@ -92,7 +92,7 @@ export const navItems = [
       id: 3,
       title: "TrackIt Course Instructor Dashboard",
       des: "A Real Dashboard to track and record of Course instructors at infosys using Springboot and Angular ",
-      img: "/p3.svg",
+      img: "/p7.svg",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     },
     {
@@ -107,7 +107,7 @@ export const navItems = [
         id: 5,
         title: "Task Management Application",
         des: "A full Stack Springboot Application under works, which is aimed at task management for user, Using Angular as the frontend framework for this project",
-        img: "/p3.svg",
+        img: "/p8.svg",
         link: "https://github.com/Jayanth-stack?tab=repositories",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg","/database-icon.svg","/auth-icon.svg","/security-icon.svg"],
       },
