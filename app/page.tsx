@@ -7,6 +7,7 @@ import RecentProjects from "@/Components/RecentProjects";
 import { FloatingNav } from "@/Components/ui/FloatingNav";
 import Image from "next/image";
 import { FaHome } from "react-icons/fa";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
           <Experience></Experience>
           <Approach/>
           <Footer/>
-          
+          <SpeedInsights/>
           
         </div>
       </div>
