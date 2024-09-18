@@ -70,7 +70,7 @@ export const PinPerspective = ({
     <motion.div className="pointer-events-none  w-full h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className=" w-full h-full -mt-7 flex-none  inset-0">
         <div className="absolute top-0 inset-x-0  flex justify-center">
-          <a
+          <a suppressHydrationWarning
             href={href}
             target={"_blank"}
             className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 "
@@ -83,7 +83,7 @@ export const PinPerspective = ({
           </a>
         </div>
 
-        <div
+        <div suppressHydrationWarning
           style={{
             perspective: "1000px",
             transform: "rotateX(70deg) translateZ(0)",
