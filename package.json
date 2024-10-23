@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "cross-env NEXT_PUBLIC_FRAMEWORK=next NODE_ENV=development node server.js",
+    "build-next": "cross-env NEXT_PUBLIC_FRAMEWORK=next next build",
+    "build": "yarn build-next",
+    "start": "node server.js -p 80",
+    "build:staging": "env-cmd -f .env.staging yarn build",
+    "start-next": "cross-env NEXT_PUBLIC_FRAMEWORK=next NODE_ENV=production node server.js"  
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@react-three/drei": "^9.111.4",
     "@react-three/fiber": "^8.17.6",
+    "@sentry/nextjs": "^8.32.0",
     "@vercel/speed-insights": "^1.0.12",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
