@@ -32,7 +32,7 @@ A cutting-edge portfolio website built with Next.js, TypeScript, and React, feat
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+https://github.com/Jayanth-stack/jayanthalapati.git
 ```
 
 2. **Install dependencies**
