@@ -11,23 +11,29 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   return (
-    <main>
-      <div className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-        <div className="max-w-7xl w-full">
+    <main className="min-h-screen">
+      <div className="relative bg-black-100 flex flex-col mx-auto sm:px-10 px-5">
+        <div className="max-w-7xl w-full mx-auto">
           <FloatingNav navItems={[
             {name : 'Home' , link:'/', icon: <FaHome/>}
           ]}/>
           <Hero/>
-          <Grid/>
-          <RecentProjects/>
-          <Experience></Experience>
-          <Approach/>
+          <div className="py-16" id="about">
+            <Grid/>
+          </div>
+          <div className="py-16">
+            <RecentProjects/>
+          </div>
+          <div className="py-16">
+            <Experience/>
+          </div>
+          <div className="py-16">
+            <Approach/>
+          </div>
           <Footer/>
           <SpeedInsights/>
-          
         </div>
       </div>
-
     </main>
   ); 
 }
