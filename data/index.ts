@@ -74,45 +74,46 @@ export const navItems = [
   export const projects = [
     {
       id: 1,
-      title: "BeyondPasswords:Secure Online Banking Systems",
-      des: "Developed a secure Flask backend with MySQL for authentication, transaction processing, and integrated Twilio for two-factor authentication, highlighting backend development and RESTful API design skills",
+      title: "BeyondPasswords: Secure Online Banking System",
+      des: "Engineered a robust online banking platform using Flask and MySQL, implementing secure authentication, transaction processing, and two-factor authentication with Twilio. Demonstrates expertise in backend development, RESTful API design, and cybersecurity best practices.",
       img: "/p1.svg",
-      iconLists: ["/auth-icon.svg", "/database-icon.svg", "/ts.svg", "/three.svg", "/security-icon.svg"],
+      iconLists: ["/flask-icon.svg", "/mysql-icon.svg", "/rest-api-icon.svg", "/twilio-icon.svg", "/security-icon.svg"],
       link: "https://github.com/Jayanth-stack?tab=repositories",
     },
     {
       id: 2,
-      title: "Using TinyML concepts to Alert Cyclists",
-      des: "Designed and deployed a CNN for cyclist safety with 98.9% accuracy on a microcontroller using TensorFlow Lite, showcasing expertise in machine learning and edge computing",
+      title: "Trading Application using Gemini & CoinAPI",
+      des: "Developed a crypto trading application utilizing Gemini and CoinAPI, with real-time data fetching and trade execution capabilities. Showcases API integration, data-driven UI components, and real-time financial tech handling.",
       img: "/p5.svg",
-      iconLists: ["/ml-icon.svg", "/edge-computing-icon.svg"],
+      iconLists: ["/api-icon.svg", "/crypto-icon.svg", "/node-icon.svg", "/chart-icon.svg"],
       link: "https://github.com/Jayanth-stack?tab=repositories",
     },
     {
       id: 3,
-      title: "TrackIt Course Instructor Dashboard",
-      des: "A Real Dashboard to track and record of Course instructors at infosys using Springboot and Angular ",
+      title: "Scalable RAG Application (Instructor Dashboard)",
+      des: "Built a real-time instructor dashboard system at Infosys using Spring Boot and Angular, enabling efficient monitoring, recording, and management of course instructors. Highlights include full-stack development and scalable architecture.",
       img: "/p7.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    },
-    {
-      id: 4,
-      title: "Animated Apple Iphone 3D Website",
-      des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-      img: "/p4.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+      iconLists: ["/spring-icon.svg", "/angular-icon.svg", "/java-icon.svg", "/database-icon.svg", "/dashboard-icon.svg"],
       link: "https://github.com/Jayanth-stack?tab=repositories",
     },
     {
-        id: 5,
-        title: "Task Management Application",
-        des: "A full Stack Springboot Application under works, which is aimed at task management for user, Using Angular as the frontend framework for this project",
-        img: "/p8.svg",
-        link: "https://github.com/Jayanth-stack?tab=repositories",
-        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg","/database-icon.svg","/auth-icon.svg","/security-icon.svg"],
-      },
-
+      id: 4,
+      title: "Animated Apple iPhone 3D Website",
+      des: "Reimagined the Apple iPhone 15 Pro webpage with immersive 3D visuals using Three.js and fluid GSAP animations. Demonstrates creative frontend engineering and advanced web animations.",
+      img: "/p4.svg",
+      iconLists: ["/nextjs-icon.svg", "/three.svg", "/gsap.svg", "/ts.svg", "/tail.svg"],
+      link: "https://github.com/Jayanth-stack?tab=repositories",
+    },
+    {
+      id: 5,
+      title: "Task Management Application",
+      des: "Designed a secure and responsive full-stack task management platform using Spring Boot and Angular. Integrates user authentication, database handling, and task tracking for productivity enhancement.",
+      img: "/p8.svg",
+      iconLists: ["/spring-icon.svg", "/angular-icon.svg", "/ts.svg", "/auth-icon.svg", "/security-icon.svg", "/database-icon.svg"],
+      link: "https://github.com/Jayanth-stack?tab=repositories",
+    },
   ];
+  
   
   
   export const companies = [
