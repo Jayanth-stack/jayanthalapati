@@ -137,3 +137,9 @@ Your Name - jayanthalapati@gmail.com
 ---
 
 ⭐️ Star this repo if you find it helpful!
+
+# Jayanth Alapati Portfolio
+
+Portfolio website built with Next.js and deployed on GitHub Pages.
+
+View the live site at: https://[your-github-username].github.io/jayanthalapati
