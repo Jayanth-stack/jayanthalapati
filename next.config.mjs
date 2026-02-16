@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
+const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
+
 const nextConfig = {
-  output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/jayanthalapati' : '',
+  output: isGitHubPages ? "export" : undefined,
+  basePath: isGitHubPages ? "/jayanthalapati" : "",
   images: {
-    unoptimized: true,
+    unoptimized: isGitHubPages,
   },
 };
 
