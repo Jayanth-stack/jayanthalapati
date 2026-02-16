@@ -34,11 +34,12 @@ export const BackgroundGradientAnimation = ({
   containerClassName?: string;
 }) => {
   const interactiveRef = useRef<HTMLDivElement>(null);
+  const curX = useRef(0);
+  const curY = useRef(0);
+  const tgX = useRef(0);
+  const tgY = useRef(0);
+  const frameId = useRef<number | null>(null);
 
-  const [curX, setCurX] = useState(0);
-  const [curY, setCurY] = useState(0);
-  const [tgX, setTgX] = useState(0);
-  const [tgY, setTgY] = useState(0);
   useEffect(() => {
     document.body.style.setProperty(
       "--gradient-background-start",
@@ -56,28 +57,47 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--pointer-color", pointerColor);
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
-  }, []);
+  }, [
+    blendingValue,
+    fifthColor,
+    firstColor,
+    fourthColor,
+    gradientBackgroundEnd,
+    gradientBackgroundStart,
+    pointerColor,
+    secondColor,
+    size,
+    thirdColor,
+  ]);
 
   useEffect(() => {
-    function move() {
+    if (!interactive) return;
+
+    const move = () => {
       if (!interactiveRef.current) {
+        frameId.current = requestAnimationFrame(move);
         return;
       }
-      setCurX(curX + (tgX - curX) / 20);
-      setCurY(curY + (tgY - curY) / 20);
+      curX.current += (tgX.current - curX.current) / 20;
+      curY.current += (tgY.current - curY.current) / 20;
       interactiveRef.current.style.transform = `translate(${Math.round(
-        curX
-      )}px, ${Math.round(curY)}px)`;
-    }
+        curX.current
+      )}px, ${Math.round(curY.current)}px)`;
+      frameId.current = requestAnimationFrame(move);
+    };
 
-    move();
-  }, [tgX, tgY]);
+    frameId.current = requestAnimationFrame(move);
+
+    return () => {
+      if (frameId.current) cancelAnimationFrame(frameId.current);
+    };
+  }, [interactive]);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (interactiveRef.current) {
       const rect = interactiveRef.current.getBoundingClientRect();
-      setTgX(event.clientX - rect.left);
-      setTgY(event.clientY - rect.top);
+      tgX.current = event.clientX - rect.left;
+      tgY.current = event.clientY - rect.top;
     }
   };
 
