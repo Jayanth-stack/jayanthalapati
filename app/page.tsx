@@ -14,26 +14,26 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <div className="relative bg-black-100 flex flex-col mx-auto sm:px-10 px-5">
-        <div className="max-w-7xl w-full mx-auto">
+        <div className="section-shell">
           <FloatingNav navItems={[{ name: "Home", link: "/", icon: <FaHome /> }, ...navItems]} />
-          <Hero/>
-          <div className="py-16" id="about">
-            <Grid/>
+          <Hero />
+          <div className="section-spacing" id="about">
+            <Grid />
           </div>
-          <div className="py-16" id="projects">
-            <RecentProjects/>
+          <div className="section-spacing" id="projects">
+            <RecentProjects />
           </div>
-          <div className="py-16" id="experience">
-            <Experience/>
+          <div className="section-spacing" id="experience">
+            <Experience />
           </div>
           <SkillHighlights />
-          <div className="py-16">
-            <Approach/>
+          <div className="section-spacing">
+            <Approach />
           </div>
-          <Footer/>
-          <SpeedInsights/>
+          <Footer />
+          <SpeedInsights />
         </div>
       </div>
     </main>
-  ); 
+  );
 }

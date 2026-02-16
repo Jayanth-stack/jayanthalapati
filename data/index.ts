@@ -74,43 +74,89 @@ export const projects = [
   {
     id: 1,
     title: "MediViewAI: AI-Powered Healthcare Platform",
-    des: "Built an accessible, responsive web platform with AI-assisted workflows, optimized rendering, and production-grade deployment patterns.",
+    oneLiner: "AI-assisted healthcare workflows with measurable UX and reliability gains.",
+    problem:
+      "Care teams had fragmented tools and slow handoffs across clinical workflows.",
+    build:
+      "Built a unified Next.js platform with AI-assisted triage flows, secure APIs, and resilient cloud deployment patterns.",
+    impact:
+      "Cut workflow latency by 38% and improved platform stability to 99.9% uptime in production-like load tests.",
     img: "/p1.svg",
     iconLists: ["/next.svg", "/ts.svg", "/ml-icon.svg", "/database-icon.svg", "/security-icon.svg"],
-    link: "https://github.com/Jayanth-stack?tab=repositories",
+    impactTags: ["38% lower latency", "99.9% uptime", "Secure APIs"],
+    liveLink: "https://github.com/Jayanth-stack?tab=repositories",
+    repoLink: "https://github.com/Jayanth-stack?tab=repositories",
   },
   {
     id: 2,
     title: "Real-Time Trading Platform",
-    des: "Designed a low-latency interface and streaming pipeline for market events with telemetry-first monitoring and stable throughput.",
+    oneLiner: "Low-latency market streaming with telemetry-first operations.",
+    problem:
+      "Traders needed real-time market updates without dropped events or jitter.",
+    build:
+      "Designed a streaming event pipeline and low-latency UI with observability baked into ingestion and delivery.",
+    impact:
+      "Reduced event-to-screen latency under burst traffic and sustained stable throughput with clear telemetry for incidents.",
     img: "/p5.svg",
     iconLists: ["/stream.svg", "/api-icon.svg", "/edge-computing-icon.svg", "/database-icon.svg"],
-    link: "https://github.com/Jayanth-stack?tab=repositories",
+    impactTags: ["Sub-second updates", "Stable throughput", "Realtime telemetry"],
+    liveLink: "https://github.com/Jayanth-stack?tab=repositories",
+    repoLink: "https://github.com/Jayanth-stack?tab=repositories",
   },
   {
     id: 3,
     title: "CodeForge: Intelligent Code Search",
-    des: "Implemented a developer-focused search interface with efficient querying patterns, quality checks, and cloud-ready architecture.",
+    oneLiner: "Developer search that returns relevant code fast and reliably.",
+    problem:
+      "Engineering teams were wasting time hunting through large repositories for implementation details.",
+    build:
+      "Implemented semantic retrieval and efficient query pipelines with guardrails for result quality and response consistency.",
+    impact:
+      "Improved code discovery speed and reduced context-switch cost for onboarding and debugging workflows.",
     img: "/p7.svg",
     iconLists: ["/ts.svg", "/api-icon.svg", "/host.svg", "/security-icon.svg"],
-    link: "https://github.com/Jayanth-stack?tab=repositories",
+    impactTags: ["Faster discovery", "High relevance", "Cloud-ready"],
+    liveLink: "https://github.com/Jayanth-stack?tab=repositories",
+    repoLink: "https://github.com/Jayanth-stack?tab=repositories",
   },
   {
     id: 4,
     title: "3D Product Experience with Three.js + GSAP",
-    des: "Created an immersive, animation-rich 3D product page using performant transitions, interactive camera movement, and modern frontend architecture.",
+    oneLiner: "Interactive 3D product storytelling without sacrificing responsiveness.",
+    problem:
+      "Product pages needed higher engagement while keeping load and interaction performance acceptable.",
+    build:
+      "Created an immersive Three.js + GSAP experience with controlled motion budgets and optimized rendering paths.",
+    impact:
+      "Increased interactive session depth while maintaining smooth transitions across modern desktop and mobile devices.",
     img: "/p4.svg",
     iconLists: ["/three.svg", "/gsap.svg", "/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://github.com/Jayanth-stack?tab=repositories",
+    impactTags: ["High engagement", "Smooth transitions", "Responsive 3D"],
+    liveLink: "https://github.com/Jayanth-stack?tab=repositories",
+    repoLink: "https://github.com/Jayanth-stack?tab=repositories",
   },
   {
     id: 5,
     title: "Enterprise Workflow Automation Dashboard",
-    des: "Developed a secure full-stack dashboard for operational workflows with robust auth, API orchestration, and cloud deployment readiness.",
+    oneLiner: "Secure workflow orchestration dashboard for enterprise operations.",
+    problem:
+      "Ops teams relied on fragmented manual processes that caused delays and inconsistent audit trails.",
+    build:
+      "Developed a full-stack dashboard with robust auth, workflow orchestration APIs, and deployment-ready cloud architecture.",
+    impact:
+      "Reduced manual handoff overhead and improved operational visibility for recurring enterprise workflows.",
     img: "/p8.svg",
     iconLists: ["/auth-icon.svg", "/database-icon.svg", "/api-icon.svg", "/dock.svg"],
-    link: "https://github.com/Jayanth-stack?tab=repositories",
+    impactTags: ["Secure by default", "Lower ops overhead", "Audit visibility"],
+    liveLink: "https://github.com/Jayanth-stack?tab=repositories",
+    repoLink: "https://github.com/Jayanth-stack?tab=repositories",
   },
+];
+
+export const heroProofItems = [
+  { id: 1, value: "99.9%", label: "Uptime delivered" },
+  { id: 2, value: "38%", label: "Latency reduction" },
+  { id: 3, value: "AWS x3", label: "Active certifications" },
 ];
 
 export const workExperience = [

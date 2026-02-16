@@ -67,3 +67,44 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl;
+  }
+
+  .section-spacing {
+    @apply py-16 md:py-20;
+  }
+
+  .display-text {
+    @apply text-4xl font-semibold leading-tight tracking-tight md:text-5xl lg:text-6xl;
+  }
+
+  .section-heading {
+    @apply text-3xl font-semibold leading-tight tracking-tight md:text-4xl lg:text-5xl;
+  }
+
+  .body-text {
+    @apply text-sm leading-relaxed md:text-base;
+  }
+
+  .caption-text {
+    @apply text-xs tracking-wide md:text-sm;
+  }
+
+  .heading {
+    @apply section-heading;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

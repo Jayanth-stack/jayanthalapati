@@ -6,8 +6,9 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jayanth's Portifolio",
-  description: "Modern Web based portfolio using Next.js",
+  title: "Jayanth Alapati | Senior Software Engineer",
+  description:
+    "Senior Software Engineer focused on AI platforms, distributed systems, and cloud-native backend architecture.",
 };
 
 export default function RootLayout({
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} antialiased`}>
         <ThemeProvider
             attribute="class"
             defaultTheme="dark"

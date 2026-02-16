@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
+  useReducedMotion,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -21,8 +22,38 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
+  const shouldReduceMotion = useReducedMotion();
 
   const [visible, setVisible] = useState(false);
+  const [activeSection, setActiveSection] = useState("/");
+
+  useEffect(() => {
+    const sectionLinks = navItems
+      .map((item) => item.link)
+      .filter((link) => link.startsWith("#"));
+
+    const updateActiveSection = () => {
+      const midpoint = window.scrollY + window.innerHeight * 0.35;
+      let current = "/";
+
+      sectionLinks.forEach((link) => {
+        const section = document.querySelector(link) as HTMLElement | null;
+        if (!section) {
+          return;
+        }
+
+        if (section.offsetTop <= midpoint) {
+          current = link;
+        }
+      });
+
+      setActiveSection(current);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    return () => window.removeEventListener("scroll", updateActiveSection);
+  }, [navItems]);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -53,10 +84,10 @@ export const FloatingNav = ({
           opacity: visible ? 1 : 0,
         }}
         transition={{
-          duration: 0.2,
+          duration: shouldReduceMotion ? 0 : 0.2,
         }}
         className={cn(
-          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
+          "flex max-w-fit fixed top-8 inset-x-0 mx-auto rounded-full border border-white/15 bg-black/80 shadow-[0_10px_30px_rgba(0,0,0,0.35)] backdrop-blur-md z-[5000] pr-2 pl-6 py-2 items-center justify-center space-x-2 md:space-x-3",
           className
         )}
       >
@@ -65,19 +96,21 @@ export const FloatingNav = ({
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative items-center flex space-x-1 rounded-full px-3 py-1.5 text-sm transition-colors",
+              activeSection === navItem.link
+                ? "bg-white/12 text-white"
+                : "text-white-100 hover:text-white"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
+            <span className="hidden sm:block">{navItem.name}</span>
           </Link>
         ))}
         <a
           href="#contact"
-          className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full"
+          className="relative rounded-full border border-white/20 bg-white px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-white/90"
         >
           <span>Let&apos;s talk</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
         </a>
       </motion.div>
     </AnimatePresence>
